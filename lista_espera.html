@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gerenciar Lista de Espera - Sistema de Biblioteca</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Gerenciamento da Lista de Espera</h1>
+
+        <div class="search-bar">
+            <input type="text" placeholder="Buscar item por título ou ISBN...">
+            <button type="submit" class="btn">Buscar</button>
+        </div>
+
+        <div class="results-list">
+            <h2>Lista de Espera para: [Título do Livro]</h2>
+            <div class="item-result">
+                <p><strong>Posição 1:</strong> [Nome do Associado 1]</p>
+                <button class="btn">Notificar Associado</button>
+            </div>
+            <div class="item-result">
+                <p><strong>Posição 2:</strong> [Nome do Associado 2]</p>
+                 <button class="btn" disabled>Aguardando</button>
+            </div>
+             <div class="item-result">
+                <p><strong>Posição 3:</strong> [Nome do Associado 3]</p>
+                 <button class="btn" disabled>Aguardando</button>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

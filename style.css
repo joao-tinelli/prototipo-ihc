@@ -1,0 +1,150 @@
+/* style.css */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+}
+
+.container {
+    background-color: #fff;
+    padding: 30px 40px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 800px;
+}
+
+h1 {
+    color: #0056b3;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+h2 {
+    color: #333;
+    border-bottom: 2px solid #0056b3;
+    padding-bottom: 5px;
+    margin-top: 30px;
+}
+
+/* Formulários e Inputs */
+.input-group {
+    margin-bottom: 15px;
+}
+
+.input-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.input-group input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+/* Botões */
+.btn {
+    background-color: #0056b3;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    width: 100%;
+    margin-top: 10px;
+}
+
+.btn:hover {
+    background-color: #004494;
+}
+
+.btn-secondary {
+    background-color: #6c757d;
+}
+
+.btn-secondary:hover {
+    background-color: #5a6268;
+}
+
+/* Login Box */
+.login-box {
+    max-width: 400px;
+    margin: auto;
+}
+
+.link-novo-associado {
+    display: block;
+    text-align: center;
+    margin-top: 15px;
+    color: #0056b3;
+    text-decoration: none;
+}
+
+/* Menu */
+.menu-section ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.menu-section ul li a {
+    display: block;
+    padding: 12px;
+    margin-bottom: 5px;
+    background-color: #f0f0f0;
+    text-decoration: none;
+    color: #333;
+    border-radius: 4px;
+    transition: background-color 0.3s;
+}
+
+.menu-section ul li a:hover {
+    background-color: #e0e0e0;
+}
+
+/* Consulta de Acervo e Empréstimos */
+.search-bar {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 30px;
+}
+
+.search-bar input {
+    flex-grow: 1;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.item-result, .emprestimo-item {
+    border: 1px solid #ddd;
+    padding: 15px;
+    margin-bottom: 10px;
+    border-radius: 4px;
+}
+
+.item-result .btn, .item-result .btn-secondary {
+    width: auto;
+    padding: 8px 15px;
+    font-size: 14px;
+    margin-top: 5px;
+}
+
+.disponivel, .status-normal {
+    color: #28a745;
+    font-weight: bold;
+}
+
+.indisponivel, .status-atraso {
+    color: #dc3545;
+    font-weight: bold;
+}

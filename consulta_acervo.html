@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Consulta de Acervo - Sistema de Biblioteca</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Consulta de Acervo</h1>
+        <form class="search-bar">
+            <input type="text" placeholder="Buscar por título, autor, ISBN...">
+            <button type="submit" class="btn">Buscar</button>
+        </form>
+
+        <div class="results-list">
+            <h2>Resultados</h2>
+            <div class="item-result">
+                <p><strong>Título do Livro 1</strong> (Autor, Editora)</p>
+                <p class="disponivel">Status: Disponível</p>
+                <button class="btn">Solicitar empréstimo</button>
+            </div>
+            <div class="item-result">
+                <p><strong>Título da Revista A</strong> (Data: 01/09/2025)</p>
+                <p class="indisponivel">Status: Indisponível</p>
+                <button class="btn-secondary">Entrar na lista de espera</button>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script> 
+</body>
+</html>

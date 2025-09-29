@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gerenciar Empréstimos - Sistema de Biblioteca</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Gerenciamento de Empréstimos</h1>
+
+        <div class="search-bar">
+            <input type="text" placeholder="Buscar associado por código ou nome...">
+            <button type="submit" class="btn">Buscar</button>
+        </div>
+
+        <div class="results-list">
+            <h2>Empréstimos de: [Nome do Associado]</h2>
+            
+            <div class="emprestimo-item">
+                <p><strong>Título do Livro 1</strong> - Exemplar Cód: 001</p>
+                <p>Data de devolução prevista: 25/09/2025</p>
+                <p class="status-normal">Status: Normal</p>
+                <button class="btn">Registrar Devolução</button>
+            </div>
+
+            <div class="emprestimo-item">
+                <p><strong>Título do Livro 2</strong> - Exemplar Cód: 008</p>
+                <p>Data de devolução prevista: 11/09/2025</p>
+                <p class="status-atraso">Status: Atrasado</p>
+                <button class="btn-secondary">Registrar Devolução e Calcular Multa</button>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

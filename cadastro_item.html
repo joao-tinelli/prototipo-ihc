@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro de Item - Sistema de Biblioteca</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Cadastro de Item no Acervo</h1>
+
+        <div class="form-section">
+            <h2>Cadastrar Livro</h2>
+            <form>
+                <div class="input-group">
+                    <label>Título:</label>
+                    <input type="text" required>
+                </div>
+                <div class="input-group">
+                    <label>Autores:</label>
+                    <input type="text" required>
+                </div>
+                <div class="input-group">
+                    <label>Editora:</label>
+                    <input type="text">
+                </div>
+                <div class="input-group">
+                    <label>ISBN:</label>
+                    <input type="text">
+                </div>
+                <div class="input-group">
+                    <label>Palavras-chave:</label>
+                    <input type="text">
+                </div>
+                <div class="input-group">
+                    <label>Nº de exemplares:</label>
+                    <input type="number" min="1" value="1" required>
+                </div>
+                <button type="submit" class="btn">Cadastrar Livro</button>
+            </form>
+        </div>
+
+        <div class="form-section">
+            <h2>Cadastrar Revista</h2>
+            <form>
+                <div class="input-group">
+                    <label>Título:</label>
+                    <input type="text" required>
+                </div>
+                <div class="input-group">
+                    <label>Data da edição:</label>
+                    <input type="date" required>
+                </div>
+                <div class="input-group">
+                    <label>Nº de exemplares:</label>
+                    <input type="number" min="1" value="1" required>
+                </div>
+                <button type="submit" class="btn">Cadastrar Revista</button>
+            </form>
+        </div>
+    </div>
+    <script src="script.js"></script> 
+</body>
+</html>

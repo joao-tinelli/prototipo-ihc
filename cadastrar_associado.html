@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastrar Associado - Sistema de Biblioteca</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Cadastro de Novo Associado</h1>
+        <div class="form-section">
+            <form>
+                <div class="input-group">
+                    <label for="codigo">Código do Associado:</label>
+                    <input type="text" id="codigo" name="codigo" required>
+                </div>
+                <div class="input-group">
+                    <label for="nome">Nome Completo:</label>
+                    <input type="text" id="nome" name="nome" required>
+                </div>
+                <div class="input-group">
+                    <label for="telefone">Telefone:</label>
+                    <input type="tel" id="telefone" name="telefone">
+                </div>
+                <div class="input-group">
+                    <label for="email">E-mail:</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <div class="input-group">
+                    <label for="endereco">Endereço:</label>
+                    <input type="text" id="endereco" name="endereco">
+                </div>
+                <button type="submit" class="btn">Cadastrar Associado</button>
+            </form>
+        </div>
+    </div>
+    <script src="script.js"></script> 
+</body>
+</html>
