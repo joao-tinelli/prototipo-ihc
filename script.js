@@ -13,13 +13,60 @@ document.addEventListener('DOMContentLoaded', () => {
             const userField = document.getElementById('username');
             if (userField.value.toLowerCase().includes('biblio')) {
                 // Simula login de bibliotecário
-                alert('Login como Bibliotecário realizado com sucesso! (Simulação)');
+                alert('Login como Bibliotecário realizado com sucesso!');
+                // armazena role
+                localStorage.setItem('role', 'bibliotecario');
             } else {
                 // Simula login de associado
-                alert('Login como Associado realizado com sucesso! (Simulação)');
+                alert('Login como Associado realizado com sucesso!');
+                // armazena role
+                localStorage.setItem('role', 'associado');
             }
             window.location.href = 'menu.html'; // Redireciona para o menu
         });
+    }
+
+    // --- CORREÇÃO 1: LÓGICA DE LOGOUT ---
+    const logoutLinks = document.querySelectorAll('.logout');
+    // Itera sobre cada elemento encontrado com a classe 'logout'
+    logoutLinks.forEach(link => {
+        // Adiciona o evento 'click' a cada um deles
+        link.addEventListener('click', (e) => {
+            // Previne o comportamento padrão do link (<a>)
+            e.preventDefault(); 
+            
+            console.log('Removendo o usuário e fazendo logout...');
+            localStorage.removeItem('role');
+
+            // Redireciona o usuário para a página de login após o logout
+            alert('Você saiu com sucesso!');
+            window.location.href = 'login.html';
+        });
+    });
+
+    // --- CORREÇÃO 2: LÓGICA DE EXIBIÇÃO DO MENU (MAIS ROBUSTA E SEGURA) ---
+    // Verifica se a página atual é o menu.html
+    if (window.location.pathname.endsWith('menu.html')) {
+        const role = localStorage.getItem('role');
+        
+        // Seleciona as seções pelos IDs definidos no HTML
+        const associadoSection = document.getElementById('menu-associado');
+        const bibliotecarioSection = document.getElementById('menu-bibliotecario');
+
+        // VERIFICAÇÃO DE SEGURANÇA: Se não houver 'role', o usuário não fez login.
+        // Redireciona para a página de login para impedir acesso indevido.
+        if (!role) {
+            alert("Acesso negado. Por favor, faça o login.");
+            window.location.href = 'login.html';
+        } else if (role === 'associado') {
+            // Se for associado, esconde o menu do bibliotecário e mostra o de associado
+            if (bibliotecarioSection) bibliotecarioSection.style.display = 'none';
+            if (associadoSection) associadoSection.style.display = 'block';
+        } else if (role === 'bibliotecario') {
+            // Se for bibliotecário, esconde o menu do associado e mostra o de bibliotecário
+            if (associadoSection) associadoSection.style.display = 'none';
+            if (bibliotecarioSection) bibliotecarioSection.style.display = 'block';
+        }
     }
 
     // 2. Simulação de Busca (reutilizável para Acervo, Empréstimos, etc.)
@@ -41,9 +88,7 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 
-    // --- LÓGICA PARA BOTÕES ESPECÍFICOS ---
-
-    // Delegação de eventos para botões dentro de listas de resultados
+    // --- LÓGICA PARA BOTÕES ESPECÍFICOS (DELEGAÇÃO DE EVENTOS) ---
     document.body.addEventListener('click', function(e) {
         const target = e.target; // O elemento que foi clicado
 
